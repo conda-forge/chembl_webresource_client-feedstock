@@ -10,7 +10,7 @@ source:
   sha256: 54e71ccdfc653473055c1b5c5292d5ddb31a7f4c33f54f78996922d50fa8bb03
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   entry_points:    
     - chembl_ids=chembl_webresource_client.scripts.chembl_ids:main
