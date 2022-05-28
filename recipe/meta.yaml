@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 10
   entry_points:    
     - chembl_ids=chembl_webresource_client.scripts.chembl_ids:main
     - chembl_sim=chembl_webresource_client.scripts.chembl_sim:main
@@ -27,12 +27,12 @@ requirements:
     - grequests
     - pip
     - python
-    - requests_cache
+    - requests-cache
   run:
     - easydict
     - grequests
     - python
-    - requests_cache
+    - requests-cache
     - six
 test:
   imports:
