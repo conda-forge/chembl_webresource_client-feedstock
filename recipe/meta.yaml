@@ -1,13 +1,13 @@
 {% set name = "chembl_webresource_client" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/74/c4/6526156c7e2f164a0fc061aae20d383f0b6b1e79957510a64382e676e2dc/chembl-webresource-client-0.10.1.tar.gz
-  sha256: e4bd01ebc0e7efb028b54ea2f5a6fa70a1e8cf930da12c93811908c11fcb11eb
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b175383e8a8809c61e6af500fd6afb9e509bd236fd422cb569a3d549de7258a2
 
 build:
   noarch: python
