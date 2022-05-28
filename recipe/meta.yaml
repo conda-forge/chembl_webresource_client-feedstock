@@ -26,12 +26,12 @@ requirements:
     - easydict
     - grequests
     - pip
-    - python
+    - python >=3.6
     - requests-cache
   run:
     - easydict
     - grequests
-    - python
+    - python >=3.6
     - requests-cache
     - six
 test:
