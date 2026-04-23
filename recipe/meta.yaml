@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/chembl-webresource-client/chembl-webresource-client-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/chembl-webresource-client/chembl-webresource-client-{{ version }}.tar.gz
   sha256: d49c7db7d40d19289f0f950557d0cf133fddef56c78a5873ed922a3d5816cc20
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - chembl_ids=chembl_webresource_client.scripts.chembl_ids:main
     - chembl_sim=chembl_webresource_client.scripts.chembl_sim:main
@@ -26,15 +26,17 @@ requirements:
     - easydict
     - grequests
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - requests-cache
   run:
     - easydict
     - grequests
-    - python >=3.6
+    - python >={{ python_min }}
     - requests-cache
     - six
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - chembl_webresource_client
     - chembl_webresource_client.new_client
